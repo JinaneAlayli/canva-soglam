@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#FAF8F3" />
+  <meta name="description" content="SoGlam premium natural beauty e-commerce UI/UX prototype." />
+  <title>SoGlam — Safe in Mother Nature's Hands</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="announcement">Handcrafted in Lebanon <span>•</span> 100% Pure Cold-Pressed Oils <span>•</span> Free Local Delivery on Orders Over $50</div>
+
+  <header class="site-header" id="siteHeader">
+    <div class="nav-shell">
+      <button class="icon-btn mobile-only" id="menuBtn" aria-label="Open menu">☰</button>
+      <a class="brand" href="#home" aria-label="SoGlam home"><img src="assets/logo.png" alt="SoGlam" /></a>
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="#home">Home</a>
+        <button class="nav-shop" id="shopMenuBtn" aria-expanded="false">Shop <span>⌄</span></button>
+        <a href="#shop?featured=1">Best Sellers</a>
+        <a href="#about">About</a>
+        <a href="#story">Our Story</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="icon-btn" id="searchBtn" aria-label="Search">⌕</button>
+        <button class="icon-btn desktop-only" aria-label="Account">♙</button>
+        <button class="icon-btn desktop-only" id="wishlistBtn" aria-label="Wishlist">♡</button>
+        <button class="icon-btn cart-button" id="cartBtn" aria-label="Cart">Bag <span class="cart-count" id="cartCount">0</span></button>
+      </div>
+    </div>
+    <div class="mega-menu" id="megaMenu" aria-hidden="true">
+      <div class="mega-inner">
+        <div class="mega-links" id="megaLinks"></div>
+        <a class="mega-feature" href="#product/lilac-valley-scrub">
+          <img src="assets/lilac-scrub-premium.png" alt="Lilac Valley body scrub" />
+          <div><span>Featured ritual</span><strong>Lilac Valley</strong><small>Lavender body care</small></div>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1"></main>
+
+  <footer class="footer" id="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="assets/logo.png" alt="SoGlam" />
+        <p>Safe in Mother Nature's Hands</p>
+        <div class="footer-social"><a href="#">Instagram</a><a href="#">Facebook</a><a href="#">TikTok</a></div>
+      </div>
+      <div><h4>Shop</h4><a href="#shop">All Products</a><a href="#shop?category=face-eye">Face & Eye Care</a><a href="#shop?category=soap-bars">Artisan Soap Bars</a><a href="#shop?category=body-care">Body Care</a><a href="#shop?category=plant-oils">Pure Plant Oils</a><a href="#shop?category=fragrance">Fragrance</a></div>
+      <div><h4>About</h4><a href="#story">Our Story</a><a href="#about">Our Values</a><a href="#about">Our Impact</a><a href="#contact">Contact</a></div>
+      <div><h4>Customer Care</h4><a href="#">Shipping</a><a href="#">Returns</a><a href="#">FAQ</a><a href="#">Privacy Policy</a><a href="#">Terms</a></div>
+      <div class="footer-contact"><h4>Contact</h4><a href="mailto:SO_GLAM@OUTLOOK.COM">SO_GLAM@OUTLOOK.COM</a><a href="tel:+96176739911">+961 76 739 911</a><a href="#">SOGLAM.ONLINE</a><div class="mini-badges"><span>Green Women-Led Winner</span><span>Berytech TRI Idealab Graduate</span><span>Francophone Showcase Selected</span></div></div>
+    </div>
+    <div class="footer-bottom">© 2026 SoGlam. Crafted in Lebanon.</div>
+  </footer>
+
+  <div class="overlay" id="overlay"></div>
+
+  <aside class="drawer cart-drawer" id="cartDrawer" aria-hidden="true">
+    <div class="drawer-head"><div><span class="eyebrow">YOUR BAG</span><h3>Cart</h3></div><button class="icon-btn close-btn" data-close>×</button></div>
+    <div class="shipping-progress"><div class="progress-track"><div id="shippingProgress"></div></div><p id="shippingText">Add $50.00 for free local delivery.</p></div>
+    <div class="drawer-body" id="cartItems"></div>
+    <div class="drawer-foot"><div class="total-row"><span>Subtotal</span><strong id="cartSubtotal">$0.00</strong></div><button class="btn primary full" id="checkoutBtn">Checkout</button><a class="text-link center" href="#cart" data-close>View cart</a></div>
+  </aside>
+
+  <aside class="drawer mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="drawer-head"><img class="drawer-logo" src="assets/logo.png" alt="SoGlam" /><button class="icon-btn close-btn" data-close>×</button></div>
+    <nav class="mobile-nav">
+      <a href="#home" data-close>Home</a>
+      <details open><summary>Shop</summary><div id="mobileShopLinks"></div></details>
+      <a href="#shop?featured=1" data-close>Best Sellers</a>
+      <a href="#about" data-close>About</a>
+      <a href="#story" data-close>Our Story</a>
+      <a href="#contact" data-close>Contact</a>
+    </nav>
+  </aside>
+
+  <div class="search-panel" id="searchPanel" aria-hidden="true">
+    <div class="search-shell">
+      <div class="search-top"><span class="eyebrow">SEARCH SOGLAM</span><button class="icon-btn close-btn" data-close>×</button></div>
+      <input id="searchInput" type="search" placeholder="Search products, ingredients or rituals…" autocomplete="off" />
+      <div id="searchResults" class="search-results"></div>
+    </div>
+  </div>
+
+  <div class="modal" id="quickView" aria-hidden="true"><div class="modal-card" id="quickViewContent"></div></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
